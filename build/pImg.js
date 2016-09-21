@@ -2,7 +2,7 @@
 
     "use strict";
 
-    if (typeof define === 'function' && define.amd || define.cmd) {
+    if (typeof define === 'function' && define) {
         define(function() { return factory(global); });
     } else {
         global.pImg = factory(global);
