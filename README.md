@@ -5,24 +5,20 @@ Usage, please see the source code, do not too much introduction
 
 ```javascript
 
+	var num;
+
 	pImg.loader([
 		'images/a.png', 
 		'images/b.png'
 	], function(percentage){
-    	console.log(percentage);
-	});
+		num = Math.ceil(percentage * 100);
 
-	pImg.replace([
-		{
-			className: '#abc',
-			bgImgURL: 'images/c.png'
-		},
-		{
-			className: '.abcd',
-			bgImgURL: 'images/d.png'
-		}
-	], function() {
-		console.log('complate');
+        if (num >= 100) {
+            pImg.replace(function() {
+            	console.log('complate');
+            });
+        }
+
 	});
 
 ```
