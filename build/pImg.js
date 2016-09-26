@@ -54,7 +54,9 @@
         for (var i = 0; i < imgList.length; i++) {
 
             var src = imgList[i].getAttribute('_src');
-            imgList[i].setAttribute('src', src);
+            if (src) {
+                imgList[i].setAttribute('src', src);
+            }
 
         }
 
